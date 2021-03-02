@@ -12,7 +12,7 @@ class SliderController extends Controller
     public function index() 
     {
         $slider = Slider::get();
-        return view('admin.slider.index',['slider' => $slider]);
+        return view('admin.slider.index_polos',['slider' => $slider]);
     }
 
     public function edit($id = NULL) 
@@ -26,8 +26,8 @@ class SliderController extends Controller
         $request->validate([
             'judul' => 'required',
             'text' => 'required',
-            'urutan' => 'required',
-            // 'gambar'  => 'required|mimes:jpeg,jpg,png|max:500' 
+            // 'urutan' => 'required',
+            'gambar'  => 'mimes:jpeg,jpg,png|max:500' 
         ]);
 
         $slider = Slider::findOrFail($request->id);
@@ -46,12 +46,12 @@ class SliderController extends Controller
         return redirect()->route('admin.slider.index')->with('Data Berhasil di Update');
     }
 
-    public function delete($id = NULL) 
-    {
-        $slider = Slider::findOrFail($id);
-        unlink(public_path('uploads/'.$slider->gambar));
-        $slider->delete();
+    // public function delete($id = NULL) 
+    // {
+    //     $slider = Slider::findOrFail($id);
+    //     unlink(public_path('uploads/'.$slider->gambar));
+    //     $slider->delete();
 
-        return redirect()->route('admin.slider.index')->with('Data Berhasil di Dihapus');
-    }
+    //     return redirect()->route('admin.slider.index')->with('Data Berhasil di Dihapus');
+    // }
 }

@@ -20,7 +20,8 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
         Route::get('/edit/{id}', [SliderController::class, 'edit'])->name('edit');
         Route::post('/edit/{id}', [SliderController::class, 'update'])->name('update');
 
-        Route::get('/delete/{id}', [SliderController::class, 'delete'])->name('delete');
+        // lali nek renek delete slider
+        // Route::get('/delete/{id}', [SliderController::class, 'delete'])->name('delete');
     });
 
     Route::group(['prefix' => '/product'], function(){

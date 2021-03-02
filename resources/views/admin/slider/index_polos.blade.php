@@ -20,9 +20,9 @@
             <tr>
                 <td>{{ $item->judul }}</td>
                 <td>{{ $item->text }}</td>
-                <td>{{ $item->gambar }}</td>
+                <td><img src="{{ url('uploads/'.$item->gambar) }}" width="100" alt="{{$item->judul}}"></td>
                 <td>{{ $item->urutan }}</td>
-                <td><a href={{route('admin.slider.edit',['id' => $item->id])}}>edit</a> || <a href="{{route('admin.slider.delete', ['id' => $item->id])}}">delete</a></td>
+                <td><a href={{route('admin.slider.edit',['id' => $item->id])}}>edit</a></td>
             </tr>
         @endforeach
     </table>
