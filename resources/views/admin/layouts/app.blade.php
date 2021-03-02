@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="{{ asset('admin') }}/assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Material Dashboard PRO by Creative Tim
+        @yield('title')
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -334,6 +334,15 @@
                 alert('You clicked on Like button');
             });
         });
+
+    </script>
+    {{-- alert  fade out --}}
+    <script>
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            })
+        }, 3000);
 
     </script>
 </body>

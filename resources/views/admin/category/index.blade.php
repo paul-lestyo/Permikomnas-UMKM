@@ -1,14 +1,10 @@
     @extends('admin.layouts.app')
     @section('title', 'Dashboard UMKM')
     @section('content')
-
         <div class="content">
             <div class="container-fluid">
                 @if ($message = Session::get('success'))
                     <div class="alert alert-success">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <i class="material-icons">close</i>
-                        </button>
                         <span>
                             <b> Success - </b> {{ $message }}</span>
                     </div>
@@ -20,11 +16,13 @@
                                 <div class="card-icon">
                                     <i class="material-icons">assignment</i>
                                 </div>
-                                <h4 class="card-title">DataTables.net</h4>
+                                <h4 class="card-title">Tabel Kategori</h4>
                             </div>
                             <div class="card-body">
                                 <div class="toolbar">
                                     <!--        Here you can write extra buttons/actions for the toolbar              -->
+                                    <button class="btn btn-info btn-round" data-toggle="modal"
+                                        data-target="#inputKategori">Tambah Data</button>
                                 </div>
                                 <div class="material-datatables">
                                     <table id="datatables" class="table table-striped table-no-bordered table-hover"
@@ -50,10 +48,9 @@
                                                     <td>{{ $i++ }}</td>
                                                     <td>{{ $item->nama_category }}</td>
                                                     <td class="text-right">
-                                                        <a href="#" class="btn btn-link btn-info btn-just-icon like"><i
-                                                                class="material-icons">favorite</i></a>
-                                                        <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i
-                                                                class="material-icons">dvr</i></a>
+                                                        <a href="" class="btn btn-link btn-success btn-just-icon edit"
+                                                            data-toggle="modal" data-target="#edit{{ $item->id }}">
+                                                            <i class="material-icons">edit</i></a>
                                                         <form action="{{ route('admin.delete', $item->id) }}"
                                                             class="d-inline">
                                                             <button class="btn btn-link btn-danger btn-just-icon remove"
@@ -76,4 +73,78 @@
                 <!-- end row -->
             </div>
         </div>
+        {{-- modal input kategori --}}
+        <!-- Classic Modal -->
+        <div class="modal fade" id="inputKategori" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog    ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('admin.add') }}" method="post">
+                            @csrf
+                            <div class="card ">
+                                <div class="card-header card-header-rose card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">input</i>
+                                    </div>
+                                    <h4 class="card-title">Form Input</h4>
+                                </div>
+                                <div class="card-body ">
+                                    <div class="form-group">
+                                        <label for="" class="bmd-label-floating"> Jenis Kategori *</label>
+                                        <input type="text" name="nama" class="form-control" required="true">
+                                    </div>
+                                    <div class="category form-category">* Wajib Diisi</div>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <button type="submit" class="btn btn-rose">Simpan</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- modal  edit kategori --}}
+        @foreach ($category as $item)
+            <div class="modal fade" id="edit{{ $item->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog    ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{ route('admin.update', $item->id) }}" method="post">
+                                @csrf
+                                <div class="card ">
+                                    <div class="card-header card-header-rose card-header-icon">
+                                        <div class="card-icon">
+                                            <i class="material-icons">input</i>
+                                        </div>
+                                        <h4 class="card-title">Form Input</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="form-group">
+                                            <label for="" class="bmd-label-floating"> Jenis Kategori *</label>
+                                            <input type="text" name="nama" value="{{ $item->nama_category }}"
+                                                class="form-control" required="true">
+                                        </div>
+                                        <div class="category form-category">* Wajib Diisi</div>
+                                    </div>
+                                    <div class="card-footer text-right">
+                                        <button type="submit" class="btn btn-rose">Simpan</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     @endsection

@@ -60,13 +60,13 @@
                 <div class="collapse" id="tablesExamples">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ asset('admin') }}/examples/tables/kategori.html">
+                            <a class="nav-link" href="{{ route('admin.category') }}">
                                 <span class="sidebar-mini"> K </span>
                                 <span class="sidebar-normal"> Kategori </span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ asset('admin') }}/examples/tables/produk.html">
+                            <a class="nav-link" href="{{ route('admin.category') }}">
                                 <span class="sidebar-mini"> P </span>
                                 <span class="sidebar-normal"> Produk </span>
                             </a>

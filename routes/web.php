@@ -12,7 +12,7 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
         return view('admin/layouts/app');
     });
     Route::group(['as' => 'slider.','prefix' => '/slider'], function(){
-        Route::get('/', [SliderController::class, 'index'])->name('index');
+        Route::get('/', [SliderController::class, 'index'])->name('slider');
 
         Route::get('/add', [SliderController::class, 'add'])->name('add');
         Route::post('/add', [SliderController::class, 'create'])->name('create');
@@ -37,10 +37,10 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
     Route::group(['prefix' => '/category'], function(){
         Route::get('/', [CategoryController::class, 'index'])->name('category');
         Route::get('/delete/{id}', [CategoryController::class, 'delete'])->name('delete');
+        Route::post('/add', [CategoryController::class, 'add'])->name('add');
+        Route::post('/update/{id}', [CategoryController::class, 'update'])->name('update');
 
-        Route::get('/add', function() {
-            return view('admin/category/add');
-        });
+
         Route::get('/edit', function() {
             return view('admin/category/edit');
         });

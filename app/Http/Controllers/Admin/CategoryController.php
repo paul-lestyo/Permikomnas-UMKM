@@ -19,4 +19,22 @@ class CategoryController extends Controller
         $data->delete();
         return redirect()->route('admin.category')->with('success','Data Berhasil di Hapus');
     }
+
+    public function add(request $request)
+    {
+       $data = new Category;
+       $data->nama_category = $request->nama;
+       $data->save();
+        return redirect()->route('admin.category')
+        ->with('success', 'Data Berhasil Ditambahkan.');
+    }
+    
+    public function update(request $request,$id)
+    {
+        $data = Category::find($id);
+        $data->nama_category  = $request->nama;
+        $data->save();
+        return redirect()->route('admin.category')
+        ->with('success', 'Data Berhasil Diubah.');
+    }
 }
