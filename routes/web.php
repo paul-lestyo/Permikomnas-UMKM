@@ -12,7 +12,7 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
         return view('admin/layouts/app');
     });
     Route::group(['as' => 'slider.','prefix' => '/slider'], function(){
-        Route::get('/', [SliderController::class, 'index']);
+        Route::get('/', [SliderController::class, 'index'])->name('index');
 
         Route::get('/add', [SliderController::class, 'add'])->name('add');
         Route::post('/add', [SliderController::class, 'create'])->name('create');

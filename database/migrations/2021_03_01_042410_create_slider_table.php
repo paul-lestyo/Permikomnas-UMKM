@@ -16,8 +16,8 @@ class CreateSliderTable extends Migration
         Schema::create('slider', function (Blueprint $table) {
             $table->id();
             $table->string('judul', 50)->nullable();
-            $table->string('text', 50)->nullable();
-            $table->string('gambar', 50)->nullable();
+            $table->text('text')->nullable();
+            $table->string('gambar', 255)->nullable();
             $table->integer('urutan')->nullable();
         });
     }
