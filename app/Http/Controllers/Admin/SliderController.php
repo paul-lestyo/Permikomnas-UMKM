@@ -45,13 +45,4 @@ class SliderController extends Controller
 
         return redirect()->route('admin.slider.index')->with('Data Berhasil di Update');
     }
-
-    // public function delete($id = NULL) 
-    // {
-    //     $slider = Slider::findOrFail($id);
-    //     unlink(public_path('uploads/'.$slider->gambar));
-    //     $slider->delete();
-
-    //     return redirect()->route('admin.slider.index')->with('Data Berhasil di Dihapus');
-    // }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\TokoController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\HomeController;
 
@@ -13,15 +14,21 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
     });
     Route::group(['as' => 'slider.','prefix' => '/slider'], function(){
         Route::get('/', [SliderController::class, 'index'])->name('index');
-
-        Route::get('/add', [SliderController::class, 'add'])->name('add');
-        Route::post('/add', [SliderController::class, 'create'])->name('create');
         
         Route::get('/edit/{id}', [SliderController::class, 'edit'])->name('edit');
         Route::post('/edit/{id}', [SliderController::class, 'update'])->name('update');
+    });
 
-        // lali nek renek delete slider
-        // Route::get('/delete/{id}', [SliderController::class, 'delete'])->name('delete');
+    Route::group(['as' => 'toko.','prefix' => '/toko'], function(){
+        Route::get('/', [TokoController::class, 'index'])->name('index');
+
+        Route::get('/add', [TokoController::class, 'add'])->name('add');
+        Route::post('/add', [TokoController::class, 'create'])->name('create');
+        
+        Route::get('/edit/{id}', [TokoController::class, 'edit'])->name('edit');
+        Route::post('/edit/{id}', [TokoController::class, 'update'])->name('update');
+
+        Route::get('/delete/{id}', [TokoController::class, 'delete'])->name('delete');
     });
 
     Route::group(['prefix' => '/product'], function(){
