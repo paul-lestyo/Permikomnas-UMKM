@@ -60,15 +60,21 @@
                 <div class="collapse" id="tablesExamples">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('admin.category') }}">
+                            <a class="nav-link" href="{{ route('admin.category.index') }}">
                                 <span class="sidebar-mini"> K </span>
                                 <span class="sidebar-normal"> Kategori </span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{ route('admin.category') }}">
+                            <a class="nav-link" href="{{ route('admin.product.index') }}">
                                 <span class="sidebar-mini"> P </span>
                                 <span class="sidebar-normal"> Produk </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{ route('admin.toko.index') }}">
+                                <span class="sidebar-mini"> T </span>
+                                <span class="sidebar-normal"> Toko </span>
                             </a>
                         </li>
                     </ul>

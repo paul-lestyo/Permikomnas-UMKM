@@ -27,11 +27,8 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
     Route::group(['as' => 'toko.','prefix' => '/toko'], function(){
         Route::get('/', [TokoController::class, 'index'])->name('index');
 
-        Route::get('/add', [TokoController::class, 'add'])->name('add');
-        Route::post('/add', [TokoController::class, 'create'])->name('create');
-        
-        Route::get('/edit/{id}', [TokoController::class, 'edit'])->name('edit');
-        Route::post('/edit/{id}', [TokoController::class, 'update'])->name('update');
+        Route::post('/add', [TokoController::class, 'add'])->name('add');
+        Route::post('/update/{id}', [TokoController::class, 'update'])->name('update');
 
         Route::get('/delete/{id}', [TokoController::class, 'delete'])->name('delete');
     });
@@ -49,8 +46,8 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
     });
 
 
-    Route::group(['prefix' => '/category'], function(){
-        Route::get('/', [CategoryController::class, 'index'])->name('category');
+    Route::group(['as'=>'category.','prefix' => '/category'], function(){
+        Route::get('/', [CategoryController::class, 'index'])->name('index');
         Route::get('/delete/{id}', [CategoryController::class, 'delete'])->name('delete');
         Route::post('/add', [CategoryController::class, 'add'])->name('add');
         Route::post('/update/{id}', [CategoryController::class, 'update'])->name('update');

@@ -12,15 +12,11 @@ class TokoController extends Controller
     public function index() 
     {
         $toko = Toko::get();
-        return view('admin.toko.index_polos',['toko' => $toko]);
+        return view('admin.toko.index',['toko' => $toko]);
     }
 
-    public function add() 
-    {
-        return view('admin/toko.add_polos');
-    }
 
-    public function create(Request $request) 
+    public function add(Request $request) 
     {
         $request->validate([
             'nama_toko' => 'required',
@@ -33,17 +29,10 @@ class TokoController extends Controller
             'nama_toko' => $request->nama_toko,
             'logo' => $filename
         ]);
-
-        return redirect()->route('admin.toko.index')->with("Data Berhasil Ditambahkan!");
+        return redirect()->route('admin.toko.index')->with("success","Data Berhasil Ditambahkan!");
     }
 
-    public function edit($id = NULL) 
-    {
-        $toko = Toko::findOrFail($id);
-        return view('admin.toko.edit_polos',['toko' => $toko]);
-    }
-
-    public function update(Request $request) 
+    public function update(Request $request, $id) 
     {
         $request->validate([
             'nama_toko' => 'required',
@@ -55,7 +44,9 @@ class TokoController extends Controller
 
         if(isset($request->logo)) {
             $filename = Storage::disk('public')->putFile('toko', $request->file('logo'));
-            unlink(public_path('uploads/'.$request->old_logo));
+            if(file_exists(public_path('uploads/toko/'.$request->old_logo)) ){
+                unlink(public_path('uploads/toko/'.$request->old_logo));
+            }
             $toko->logo = $filename;
         }
 
@@ -70,6 +61,6 @@ class TokoController extends Controller
         unlink(public_path('uploads/'.$toko->logo));
         $toko->delete();
 
-        return redirect()->route('admin.toko.index')->with('Data Berhasil di Dihapus');
+        return redirect()->route('admin.toko.index')->with('success','Data Berhasil di Dihapus');
     }
 }

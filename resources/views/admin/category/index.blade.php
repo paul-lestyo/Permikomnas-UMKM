@@ -51,7 +51,7 @@
                                                         <a href="" class="btn btn-link btn-success btn-just-icon edit"
                                                             data-toggle="modal" data-target="#edit{{ $item->id }}">
                                                             <i class="material-icons">edit</i></a>
-                                                        <form action="{{ route('admin.delete', $item->id) }}"
+                                                        <form action="{{ route('admin.category.delete', $item->id) }}"
                                                             class="d-inline">
                                                             <button class="btn btn-link btn-danger btn-just-icon remove"
                                                                 onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data ?')">
@@ -73,6 +73,7 @@
                 <!-- end row -->
             </div>
         </div>
+        @include('admin.layouts.footer')
         {{-- modal input kategori --}}
         <!-- Classic Modal -->
         <div class="modal fade" id="inputKategori" tabindex="-1" role="dialog" aria-hidden="true">
@@ -84,7 +85,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('admin.add') }}" method="post">
+                        <form action="{{ route('admin.category.add') }}" method="post">
                             @csrf
                             <div class="card ">
                                 <div class="card-header card-header-rose card-header-icon">
@@ -120,7 +121,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ route('admin.update', $item->id) }}" method="post">
+                            <form action="{{ route('admin.category.update', $item->id) }}" method="post">
                                 @csrf
                                 <div class="card ">
                                     <div class="card-header card-header-rose card-header-icon">

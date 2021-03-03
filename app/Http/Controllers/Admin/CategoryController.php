@@ -17,7 +17,7 @@ class CategoryController extends Controller
     {
         $data = Category::find($id);
         $data->delete();
-        return redirect()->route('admin.category')->with('success','Data Berhasil di Hapus');
+        return redirect()->route('admin.category.index')->with('success','Data Berhasil di Hapus');
     }
 
     public function add(request $request)
@@ -25,7 +25,7 @@ class CategoryController extends Controller
        $data = new Category;
        $data->nama_category = $request->nama;
        $data->save();
-        return redirect()->route('admin.category')
+        return redirect()->route('admin.category.index')
         ->with('success', 'Data Berhasil Ditambahkan.');
     }
     
@@ -34,7 +34,7 @@ class CategoryController extends Controller
         $data = Category::find($id);
         $data->nama_category  = $request->nama;
         $data->save();
-        return redirect()->route('admin.category')
+        return redirect()->route('admin.category.index')
         ->with('success', 'Data Berhasil Diubah.');
     }
 }
