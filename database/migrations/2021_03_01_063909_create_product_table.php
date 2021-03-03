@@ -16,9 +16,11 @@ class CreateProductTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->string('nama_product',50)->nullable();
-            $table->string('text', 50)->nullable();
+            $table->text('text')->nullable();
             $table->string('gambar', 255)->nullable();
             $table->string('harga', 50)->nullable();
+            $table->string('shope_link', 50)->nullable();
+            $table->string('toped_link', 50)->nullable();
             $table->foreignId('category_id')->nullable()->index();
             $table->foreignId('toko_id')->nullable()->index();
             $table->timestamps();

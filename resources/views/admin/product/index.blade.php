@@ -16,12 +16,12 @@
                             <div class="card-icon">
                                 <i class="material-icons">assignment</i>
                             </div>
-                            <h4 class="card-title">Tabel Slider</h4>
+                            <h4 class="card-title">Tabel Product</h4>
                         </div>
                         <div class="card-body">
                             <div class="toolbar">
                                 <!--        Here you can write extra buttons/actions for the toolbar              -->
-                                <a class="btn btn-info btn-round">Tambah Data</a>
+                                <a class="btn btn-info btn-round" href="{{ route('admin.product.add') }}">Tambah Data</a>
                             </div>
                             <div class="material-datatables">
                                 <table id="datatables" class="table table-striped table-no-bordered table-hover"
@@ -29,24 +29,24 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama product</th>
-                                            <th>Text</th>
-                                            <th>Gambar product</th>
+                                            <th>Nama Produk</th>
+                                            <th>Gambar Produk</th>
                                             <th>Harga</th>
-                                            <th>Category</th>
+                                            <th>Kategori</th>
                                             <th>Toko</th>
+                                            <th>Link</th>
                                             <th class="disabled-sorting text-right">Actions</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama product</th>
-                                            <th>Text</th>
-                                            <th>Gambar product</th>
+                                            <th>Nama Produk</th>
+                                            <th>Gambar Produk</th>
                                             <th>Harga</th>
-                                            <th>Category</th>
+                                            <th>Kategori</th>
                                             <th>Toko</th>
+                                            <th>Link</th>
                                             <th class="text-right">Actions</th>
                                         </tr>
                                     </tfoot>
@@ -56,16 +56,26 @@
                                             <tr>
                                                 <td>{{ $i++ }}</td>
                                                 <td>{{ $item->nama_product }}</td>
-                                                <td>{{ $item->text }}</td>
                                                 <td><img src="{{ url('uploads/' . $item->gambar) }}" width="100"
                                                         alt="{{ $item->judul }}"></td>
                                                 <td>{{ $item->harga }}</td>
                                                 <td>{{ $item->category->nama_category }}</td>
                                                 <td>{{ $item->toko->nama_toko }}</td>
+                                                <td><a href="{{ $item->shope_link }}" target="_blank">
+                                                        <img src="{{ url('aset/shopee.png') }}" alt=""></a>
+                                                    <a href="{{ $item->toped_link }}" target="_blank">
+                                                        <img src="{{ url('aset/toped.png') }}" alt=""></a>
+                                                </td>
                                                 <td class="text-right">
-                                                    <a href="" class="btn btn-link btn-success btn-just-icon edit"
-                                                        data-toggle="modal" data-target="#edit{{ $item->id }}">
-                                                        <i class="material-icons">edit</i></a>
+                                                    <a href="{{ route('admin.product.edit', $item->id) }}"
+                                                        class="btn btn-link btn-success btn-just-icon edit">
+                                                        <i class=" material-icons">edit</i></a>
+                                                    <form action="{{ route('admin.product.delete', $item->id) }}"
+                                                        class="d-inline">
+                                                        <button class="btn btn-link btn-danger btn-just-icon remove"
+                                                            onclick="return confirm('Apakah Anda Yakin Untuk Menghapus Data ?')">
+                                                            <i class="material-icons">close</i></button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -83,6 +93,4 @@
         </div>
     </div>
     @include('admin.layouts.footer')
-
-
 @endsection

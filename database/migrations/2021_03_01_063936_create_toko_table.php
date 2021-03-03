@@ -16,6 +16,7 @@ class CreateTokoTable extends Migration
         Schema::create('toko', function (Blueprint $table) {
             $table->id();
             $table->string('nama_toko',50)->nullable();
+            $table->string('contact',50)->nullable();
             $table->string('logo', 50)->nullable();
         });
     }

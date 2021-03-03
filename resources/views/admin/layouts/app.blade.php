@@ -33,6 +33,7 @@
     <script src="{{ asset('admin') }}/assets/js/core/popper.min.js"></script>
     <script src="{{ asset('admin') }}/assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="{{ asset('admin') }}/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
     <!-- Plugin for the momentJs  -->
     <script src="{{ asset('admin') }}/assets/js/plugins/moment.min.js"></script>
     <!--  Plugin for Sweet Alert -->
@@ -69,8 +70,10 @@
     <script src="{{ asset('admin') }}/assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('admin') }}/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
-    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-    <script src="{{ asset('admin') }}/assets/demo/demo.js"></script>
+
+
+
+
     <script>
         $(document).ready(function() {
             $().ready(function() {
@@ -156,8 +159,9 @@
 
                     if ($full_page_background.length != 0 && $(
                             '.switch-sidebar-image input:checked').length != 0) {
-                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find(
-                            'img').data('src');
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder')
+                            .find(
+                                'img').data('src');
 
                         $full_page_background.fadeOut('fast', function() {
                             $full_page_background.css('background-image', 'url("' +
@@ -169,8 +173,9 @@
                     if ($('.switch-sidebar-image input:checked').length == 0) {
                         var new_image = $('.fixed-plugin li.active .img-holder').find("img")
                             .attr('src');
-                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find(
-                            'img').data('src');
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder')
+                            .find(
+                                'img').data('src');
 
                         $sidebar_img_container.css('background-image', 'url("' + new_image +
                             '")');
@@ -179,7 +184,8 @@
                     }
 
                     if ($sidebar_responsive.length != 0) {
-                        $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+                        $sidebar_responsive.css('background-image', 'url("' + new_image +
+                            '")');
                     }
                 });
 
@@ -228,7 +234,8 @@
 
                     } else {
 
-                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar(
+                            'destroy');
 
                         setTimeout(function() {
                             $('body').addClass('sidebar-mini');
@@ -310,6 +317,7 @@
         }, 3000);
 
     </script>
+
 </body>
 
 </html>
