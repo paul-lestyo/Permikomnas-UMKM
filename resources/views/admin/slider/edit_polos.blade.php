@@ -22,7 +22,7 @@
         @endif
         <br>
         <label for="urutan">urutan</label>
-        <select name="urutan">
+        <select name="urutan" disabled>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
