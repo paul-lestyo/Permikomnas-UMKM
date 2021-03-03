@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="section-title-6 st-6-fashion mb-30">
-                    <h2>Fastest Growing Store</h2>
+                    <h2>Usaha Di Desa Kami</h2>
                 </div>
             </div>
             <div class="col-lg-9">
