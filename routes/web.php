@@ -15,18 +15,16 @@ Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
         return view('admin/layouts/app');
     });
     Route::group(['as' => 'slider.','prefix' => '/slider'], function(){
-        Route::get('/', [SliderController::class, 'index'])->name('slider');
+        Route::get('/', [SliderController::class, 'index'])->name('index');
 
         Route::get('/add', [SliderController::class, 'add'])->name('add');
         Route::post('/add', [SliderController::class, 'create'])->name('create');
-        
-        Route::get('/edit/{id}', [SliderController::class, 'edit'])->name('edit');
-        Route::post('/edit/{id}', [SliderController::class, 'update'])->name('update');
+
+        Route::post('/update/{id}', [SliderController::class, 'update'])->name('update');
     });
 
     Route::group(['as' => 'toko.','prefix' => '/toko'], function(){
         Route::get('/', [TokoController::class, 'index'])->name('index');
-
         Route::post('/add', [TokoController::class, 'add'])->name('add');
         Route::post('/update/{id}', [TokoController::class, 'update'])->name('update');
 

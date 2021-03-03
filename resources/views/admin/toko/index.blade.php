@@ -180,7 +180,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="toko form-toko">* Wajib Diisi</div>
+                                    <div class="category form-category">* Wajib Diisi</div>
                                     <div class="card-footer text-right">
                                         <button type="submit" class="btn btn-rose">Simpan</button>
                                     </div>

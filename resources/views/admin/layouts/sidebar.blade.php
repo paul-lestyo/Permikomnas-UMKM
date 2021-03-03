@@ -44,7 +44,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{ asset('admin') }}/examples/pages/pricing.html">
+                <a class="nav-link" href="{{ route('admin.slider.index') }}">
                     <i class="material-icons">image</i>
                     <p> Slider
                     </p>

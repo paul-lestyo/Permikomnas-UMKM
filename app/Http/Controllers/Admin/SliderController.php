@@ -12,7 +12,7 @@ class SliderController extends Controller
     public function index() 
     {
         $slider = Slider::get();
-        return view('admin.slider.index_polos',['slider' => $slider]);
+        return view('admin.slider.index',['slider' => $slider]);
     }
 
     public function edit($id = NULL) 
@@ -21,7 +21,7 @@ class SliderController extends Controller
         return view('admin.slider.edit_polos',['slider' => $slider]);
     }
 
-    public function update(Request $request) 
+    public function update(Request $request,$id) 
     {
         $request->validate([
             'judul' => 'required',
@@ -37,12 +37,12 @@ class SliderController extends Controller
 
         if(isset($request->gambar)) {
             $filename = Storage::disk('public')->putFile('slider', $request->file('gambar'));
-            unlink(public_path('uploads/'.$request->old_gambar));
+            if(file_exists(public_path('uploads/toko/'.$request->old_gambar)) ){
+                unlink(public_path('uploads/toko/'.$request->old_gambar));
+            }
             $slider->gambar = $filename;
         }
-
         $slider->save();
-
-        return redirect()->route('admin.slider.index')->with('Data Berhasil di Update');
+        return redirect()->route('admin.slider.index')->with('success','Data Berhasil di Update');
     }
 }
