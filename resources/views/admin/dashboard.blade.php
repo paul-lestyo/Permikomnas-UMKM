@@ -1,3 +1,6 @@
+@extends('admin.layouts.app')
+@section('title', 'Dashboard UMKM')
+@section('content')
 <div class="content">
     <div class="content">
         <div class="row">
@@ -69,3 +72,5 @@
         </div>
     </div>
 </div>
+@include('admin.layouts.footer')
+@endsection

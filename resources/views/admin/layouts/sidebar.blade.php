@@ -27,7 +27,7 @@
                 <div class="collapse" id="collapseExample">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('logout')}}">
                                 <span class="sidebar-mini"> -> </span>
                                 <span class="sidebar-normal"> Logout </span>
                             </a>
@@ -37,13 +37,13 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="nav-item active ">
-                <a class="nav-link" href="{{ asset('admin') }}/examples/dashboard.html">
+            <li class="nav-item {{ Request::segment(2) === 'dashboard' ? 'active' : '' }}">
+                <a class="nav-link" href="{{route('admin.dashboard')}}">
                     <i class="material-icons">dashboard</i>
                     <p> Dashboard </p>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::segment(2) === 'slider' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.slider.index') }}">
                     <i class="material-icons">image</i>
                     <p> Slider
@@ -57,21 +57,21 @@
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse" id="tablesExamples">
+                <div class="collapse {{ in_array(Request::segment(2), ['category','product','toko']) ? 'show' : '' }}" id="tablesExamples">
                     <ul class="nav">
-                        <li class="nav-item ">
+                        <li class="nav-item {{ Request::segment(2) === 'category' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('admin.category.index') }}">
                                 <span class="sidebar-mini"> K </span>
                                 <span class="sidebar-normal"> Kategori </span>
                             </a>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item {{ Request::segment(2) === 'product' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('admin.product.index') }}">
                                 <span class="sidebar-mini"> P </span>
                                 <span class="sidebar-normal"> Produk </span>
                             </a>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item {{ Request::segment(2) === 'toko' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('admin.toko.index') }}">
                                 <span class="sidebar-mini"> T </span>
                                 <span class="sidebar-normal"> Toko </span>
