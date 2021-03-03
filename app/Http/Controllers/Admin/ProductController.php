@@ -14,14 +14,16 @@ class ProductController extends Controller
     public function index() 
     {
         $product = Product::get();
-        return view('admin.product.index_polos',['product' => $product]);
+        return view('admin.product.index',['product' => $product]);
     }
 
     public function add() 
     {
-        $toko = Toko::get();
-        $category = Category::get();
-        return view('admin/product.add_polos',['toko' => $toko, 'category' => $category]);
+        $data = [
+            'toko' =>Toko::get(),
+            'category' =>Category::get()
+        ];
+        return view('admin.product.add',$data);
     }
 
     public function create(Request $request) 
@@ -33,6 +35,8 @@ class ProductController extends Controller
             'harga' => 'required',
             'category_id' => 'required',
             'toko_id' => 'required',
+        ],[
+            'text.required' =>'Deskripsi Harus Diisi'
         ]);
 
         $filename = Storage::disk('public')->putFile('product', $request->file('gambar'));
@@ -42,19 +46,23 @@ class ProductController extends Controller
             'text' => $request->text,
             'gambar' => $filename,
             'harga' => $request->harga,
+            'shope_link' => $request->shope_link,
+            'toped_link' => $request->toped_link,
             'category_id' => $request->category_id,
             'toko_id' => $request->toko_id,
         ]);
 
-        return redirect()->route('admin.product.index')->with("Data Berhasil Ditambahkan!");
+        return redirect()->route('admin.product.index')->with('success',"Data Berhasil Ditambahkan!");
     }
 
     public function edit($id = NULL) 
     {
-        $toko = Toko::get();
-        $category = Category::get();
-        $product  = Product::findOrFail($id);
-        return view('admin.product.edit_polos',['product' => $product, 'toko' => $toko, 'category' => $category]);
+        $data =[
+        'toko' => Toko::get(),
+        'category' => Category::get(),
+        'product'  => Product::findOrFail($id)
+        ];
+        return view('admin.product.edit',$data);
     }
 
     public function update(Request $request) 
@@ -72,6 +80,8 @@ class ProductController extends Controller
         $product->nama_product  = $request->nama_product;
         $product->text  = $request->text;
         $product->harga  = $request->harga;
+        $product->shope_link = $request->shope_link;
+        $product->toped_link = $request->toped_link;
         $product->category_id  = $request->category_id;
         $product->toko_id  = $request->toko_id;
 
