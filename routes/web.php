@@ -2,18 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\TokoController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.post');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/',[HomeController::class, 'index'] );
 
-Route::group(['as'=>'admin.','prefix' => '/admin'], function(){
-    Route::get('/dashboard', function() {
-        return view('admin/layouts/app');
-    });
+Route::group(['as'=>'admin.','prefix' => '/admin', 'middleware' => 'auth'], function(){
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
     Route::group(['as' => 'slider.','prefix' => '/slider'], function(){
         Route::get('/', [SliderController::class, 'index'])->name('index');
 
