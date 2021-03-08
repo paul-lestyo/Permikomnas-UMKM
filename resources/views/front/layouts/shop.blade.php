@@ -16,38 +16,43 @@
 <div class="shop-area pt-160 pb-160">
     <div class="container">
         <div class="shop-categorie-tab mb-20 nav">
-            <a href="#shop-categorie-1" data-toggle="tab">Women</a>
-            <a href="#shop-categorie-2" class="active" data-toggle="tab">men</a>
-            <a href="#shop-categorie-3" data-toggle="tab">Kids</a>
+            @php $i = 1 @endphp
+            @foreach ($category as $item_category)
+            <a href="#shop-categorie-{{$i}}" class="{{$i == 1 ? 'active' : null}}" data-toggle="tab">{{$item_category->nama_category}}</a>
+            @php $i++ @endphp
+            @endforeach
         </div>
         <div class="row flex-row-reverse">
             <div class="col-lg-12">
                 <div class="tab-content">
-                    <div id="shop-categorie-1" class="tab-pane active ">
+                    @php $i = 1 @endphp
+                    @foreach ($category as $item_category)
+                    <div id="shop-categorie-{{$i}}" class="tab-pane {{$i == 1 ? 'active' : null}}">
                         <div class="shop-top-bar">
-                            <div class="shop-top-bar-right">
+                            <div class="shop-top-bar-left">
                                 <div class="shop-tab nav">
-                                    <a href="#shop-1" class="active" data-toggle="tab"><img
-                                            src="{{ asset('front') }}/assets/images/icon/shop-grid.svg" alt=""></a>
-                                    <a href="#shop-2" data-toggle="tab"><img class="pl-3"
-                                            src="{{ asset('front') }}/assets/images/icon/shop-list.svg" alt=""></a>
+                                    <a href="#shop-{{$item_category->id}}-1" class="active" data-toggle="tab"><img
+                                            class="inject-me" src="{{ asset('front') }}/assets/images/icon/shop-grid.svg" alt=""></a>
+                                    <a href="#shop-{{$item_category->id}}-2" data-toggle="tab"><img
+                                            class="inject-me" src="{{ asset('front') }}/assets/images/icon/shop-list.svg" alt=""></a>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-content pt-30">
-                            <div id="shop-1" class="tab-pane active ">
+                            <div id="shop-{{$item_category->id}}-1" class="tab-pane active ">
                                 <div class="row">
-                                    <?php for ($i = 0; $i < 12; $i++) { ?> <div
-                                        class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                    @foreach ($product as $item_product)
+                                    @if ($item_product->category_id == $item_category->id)
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="product-wrap mb-50">
                                             <div class="product-img product-img-zoom mb-25">
                                                 <a href="" data-toggle="modal" data-target="#exampleModal">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-153.jpg"
+                                                    <img src="{{ asset('uploads/'. $item_product->gambar) }}"
                                                         alt="">
                                                 </a>
                                             </div>
                                             <div class="product-content">
-                                                <h4>Modern Light</h4>
+                                                <h4>{{ $item_product->nama_product }}</h4>
                                                 <div class="product-price">
                                                     <span>$ 124</span>
                                                 </div>
@@ -72,62 +77,65 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    @endif
+                                    @endforeach
                                 </div>
-                                <?php } ?>
+                            </div>
+                            <div id="shop-{{$item_category->id}}-2" class="tab-pane ">
+                                @foreach ($product as $item_product)
+                                @if ($item_product->category_id == $item_category->id)
+                                <div class="shop-list-wrap mb-50">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="product-list-img">
+                                                <a href="" data-toggle="modal" data-target="#exampleModal">
+                                                    <img src="{{ asset('front') }}/assets/images/product/product-138.jpg"
+                                                        alt="">
+                                                </a>
+                                                <div class="shop-list-quickview">
+                                                    <button data-toggle="modal" data-target="#exampleModal"><i
+                                                            class="icon-zoom"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="shop-list-content ml-20">
+                                                <h3><a href="#">Product Title Here</a></h3>
+                                                <div class="pro-list-price">
+                                                    <span>$50.00</span>
+                                                </div>
+                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
+                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
+                                                <div class="product-list-action">
+                                                    <a class="btn" href=""><img src="{{ url('aset/shopee.png') }}"
+                                                            alt=""></a>
+                                                    <button class="btn" data-toggle="modal" data-target="#exampleModal"><i
+                                                            class="icon-zoom"></i></button>
+                                                    <a class="btn" href=""><img src="{{ url('aset/toped.png') }}"
+                                                            alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                                @endforeach
                             </div>
                         </div>
-                        <div id="shop-2" class="tab-pane ">
-                            <?php for ($i = 1; $i < 12; $i++) { ?> <div
-                                class="shop-list-wrap mb-50">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <div class="product-list-img">
-                                            <a href="" data-toggle="modal" data-target="#exampleModal">
-                                                <img src="{{ asset('front') }}/assets/images/product/product-138.jpg"
-                                                    alt="">
-                                            </a>
-                                            <div class="shop-list-quickview">
-                                                <button data-toggle="modal" data-target="#exampleModal"><i
-                                                        class="icon-zoom"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <div class="shop-list-content ml-20">
-                                            <h3><a href="#">Product Title Here</a></h3>
-                                            <div class="pro-list-price">
-                                                <span>$50.00</span>
-                                            </div>
-                                            <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
-                                            <div class="product-list-action">
-                                                <a class="btn" href=""><img src="{{ url('aset/shopee.png') }}"
-                                                        alt=""></a>
-                                                <button class="btn" data-toggle="modal" data-target="#exampleModal"><i
-                                                        class="icon-zoom"></i></button>
-                                                <a class="btn" href=""><img src="{{ url('aset/toped.png') }}"
-                                                        alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="pro-pagination-style text-center mt-50">
+                            <ul>
+                                <li><a class="active" href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#"><i class="icofont-long-arrow-right"></i></a></li>
+                            </ul>
                         </div>
-                        <?php } ?>
                     </div>
+                    @php $i++ @endphp
+                    @endforeach
                 </div>
-                <div class="pro-pagination-style text-center mt-50">
-                    <ul>
-                        <li><a class="active" href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#"><i class="icofont-long-arrow-right"></i></a></li>
-                    </ul>
-                </div>
-
             </div>
         </div>
-
-    </div>
-</div>
 </div>
 </div>
 </div>
