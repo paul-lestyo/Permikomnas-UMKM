@@ -37,628 +37,97 @@
                         <div class="tab-content pt-30">
                             <div id="shop-1" class="tab-pane active ">
                                 <div class="row">
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <?php for ($i = 0; $i < 12; $i++) { ?> <div
+                                        class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="product-wrap mb-50">
                                             <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
+                                                <a href="" data-toggle="modal" data-target="#exampleModal">
                                                     <img src="{{ asset('front') }}/assets/images/product/product-153.jpg"
                                                         alt="">
                                                 </a>
                                             </div>
                                             <div class="product-content">
-                                                <h4><a href="product-details.html">Modern Light</a></h4>
+                                                <h4>Modern Light</h4>
                                                 <div class="product-price">
                                                     <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
                                                 </div>
                                             </div>
                                             <div class="product-action-position-1 text-center">
                                                 <div class="product-content">
-                                                    <h4><a href="product-details.html">Modern Light</a></h4>
+                                                    <h4>Modern Light</h4>
                                                     <div class="product-price">
                                                         <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
                                                     </div>
                                                 </div>
                                                 <div class="product-action-wrap">
                                                     <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
+                                                        <a class="btn" href=""><img src="{{ url('aset/shopee.png') }}"
+                                                                alt=""></a>
+                                                        <button class="btn" data-toggle="modal"
+                                                            data-target="#exampleModal"><i
+                                                                class="icon-zoom"></i></button>
+                                                        <a class="btn" href=""><img src="{{ url('aset/toped.png') }}"
+                                                                alt=""></a>
                                                     </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-152.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Wood Table Clock</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Wood Table Clock</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-151.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Smart Watch</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Smart Watch</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-139.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Wood Pen & Holder</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Wood Pen & Holder</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-138.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Eco Bag</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Eco Bag</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-137.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Table Plant</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Table Plant</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-136.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Product Title</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Product Title</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-135.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Product Title</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Product Title</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-134.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Product Title</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Product Title</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-154.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Product Title</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Product Title</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-134.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Product Title</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Product Title</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <div class="product-wrap mb-50">
-                                            <div class="product-img product-img-zoom mb-25">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-135.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-                                            <div class="product-content">
-                                                <h4><a href="product-details.html">Product Title</a></h4>
-                                                <div class="product-price">
-                                                    <span>$ 124</span>
-                                                    <span class="old-price">$ 130</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-action-position-1 text-center">
-                                                <div class="product-content">
-                                                    <h4><a href="product-details.html">Product Title</a></h4>
-                                                    <div class="product-price">
-                                                        <span>$ 124</span>
-                                                        <span class="old-price">$ 130</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-action-wrap">
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <div id="shop-2" class="tab-pane ">
-                                <div class="shop-list-wrap mb-50">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <div class="product-list-img">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-138.jpg"
-                                                        alt="">
-                                                </a>
-                                                <div class="shop-list-quickview">
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <div class="shop-list-content ml-20">
-                                                <h3><a href="#">Product Title Here</a></h3>
-                                                <div class="pro-list-price">
-                                                    <span>$50.00</span>
-                                                    <span class="old-price">$50.00</span>
-                                                </div>
-                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
-                                                <div class="product-list-action">
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shop-list-wrap mb-50">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <div class="product-list-img">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-137.jpg"
-                                                        alt="">
-                                                </a>
-                                                <div class="shop-list-quickview">
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <div class="shop-list-content ml-20">
-                                                <h3><a href="#">Product Title Here</a></h3>
-                                                <div class="pro-list-price">
-                                                    <span>$50.00</span>
-                                                    <span class="old-price">$50.00</span>
-                                                </div>
-                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
-                                                <div class="product-list-action">
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shop-list-wrap mb-50">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <div class="product-list-img">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-136.jpg"
-                                                        alt="">
-                                                </a>
-                                                <div class="shop-list-quickview">
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <div class="shop-list-content ml-20">
-                                                <h3><a href="#">Product Title Here</a></h3>
-                                                <div class="pro-list-price">
-                                                    <span>$50.00</span>
-                                                    <span class="old-price">$50.00</span>
-                                                </div>
-                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
-                                                <div class="product-list-action">
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shop-list-wrap mb-50">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <div class="product-list-img">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-135.jpg"
-                                                        alt="">
-                                                </a>
-                                                <div class="shop-list-quickview">
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <div class="shop-list-content ml-20">
-                                                <h3><a href="#">Product Title Here</a></h3>
-                                                <div class="pro-list-price">
-                                                    <span>$50.00</span>
-                                                    <span class="old-price">$50.00</span>
-                                                </div>
-                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
-                                                <div class="product-list-action">
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shop-list-wrap mb-50">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <div class="product-list-img">
-                                                <a href="product-details.html">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-134.jpg"
-                                                        alt="">
-                                                </a>
-                                                <div class="shop-list-quickview">
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
-                                                            class="icon-zoom"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <div class="shop-list-content ml-20">
-                                                <h3><a href="#">Product Title Here</a></h3>
-                                                <div class="pro-list-price">
-                                                    <span>$50.00</span>
-                                                    <span class="old-price">$50.00</span>
-                                                </div>
-                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
-                                                <div class="product-list-action">
-                                                    <button title="Add to Compare"><i class="icon-compare"></i></button>
-                                                    <div class="product-action-cart">
-                                                        <button title="Add to Cart">Add to cart</button>
-                                                    </div>
-                                                    <button title="Add to Wishlist"><i
-                                                            class="icon-heart-empty"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pro-pagination-style text-center mt-50">
-                                <ul>
-                                    <li><a class="active" href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#"><i class="icofont-long-arrow-right"></i></a></li>
-                                </ul>
+                                <?php } ?>
                             </div>
                         </div>
+                        <div id="shop-2" class="tab-pane ">
+                            <?php for ($i = 1; $i < 12; $i++) { ?> <div
+                                class="shop-list-wrap mb-50">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="product-list-img">
+                                            <a href="" data-toggle="modal" data-target="#exampleModal">
+                                                <img src="{{ asset('front') }}/assets/images/product/product-138.jpg"
+                                                    alt="">
+                                            </a>
+                                            <div class="shop-list-quickview">
+                                                <button data-toggle="modal" data-target="#exampleModal"><i
+                                                        class="icon-zoom"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="shop-list-content ml-20">
+                                            <h3><a href="#">Product Title Here</a></h3>
+                                            <div class="pro-list-price">
+                                                <span>$50.00</span>
+                                            </div>
+                                            <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
+                                                polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
+                                            <div class="product-list-action">
+                                                <a class="btn" href=""><img src="{{ url('aset/shopee.png') }}"
+                                                        alt=""></a>
+                                                <button class="btn" data-toggle="modal" data-target="#exampleModal"><i
+                                                        class="icon-zoom"></i></button>
+                                                <a class="btn" href=""><img src="{{ url('aset/toped.png') }}"
+                                                        alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <?php } ?>
                     </div>
                 </div>
+                <div class="pro-pagination-style text-center mt-50">
+                    <ul>
+                        <li><a class="active" href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#"><i class="icofont-long-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
+
     </div>
+</div>
+</div>
+</div>
 </div>
