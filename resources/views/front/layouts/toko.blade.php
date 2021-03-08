@@ -8,66 +8,14 @@
             </div>
             <div class="col-lg-9">
                 <div class="row">
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-19.png" alt="">
+                    @foreach ($toko as $item)
+                        <div class="col-lg-2 col-md-3 col-6 col-sm-4">
+                            <div class="single-brand-logo-3 mb-30">
+                                <img src="{{ url('uploads/' . $item->logo) }}" alt="{{ $item->nama_toko }}"
+                                    width="100" height="100">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-19.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-20.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-21.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-22.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-21.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-22.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-25.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-25.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-26.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-26.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 col-sm-4">
-                        <div class="single-brand-logo-3 mb-30">
-                            <img src="{{ asset('front') }}/assets/images/brand-logo/brand-logo-20.png" alt="">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
