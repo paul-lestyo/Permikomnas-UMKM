@@ -46,7 +46,7 @@
                                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <div class="product-wrap mb-50">
                                             <div class="product-img product-img-zoom mb-25">
-                                                <a href="" data-toggle="modal" data-target="#exampleModal">
+                                                <a href="" data-toggle="modal" data-target="#product-{{$item_product->id}}">
                                                     <img src="{{ asset('uploads/'. $item_product->gambar) }}"
                                                         alt="">
                                                 </a>
@@ -54,24 +54,24 @@
                                             <div class="product-content">
                                                 <h4>{{ $item_product->nama_product }}</h4>
                                                 <div class="product-price">
-                                                    <span>$ 124</span>
+                                                    <span>{{"Rp " . number_format(intval($item_product->harga),2,',','.')}}</span>
                                                 </div>
                                             </div>
                                             <div class="product-action-position-1 text-center">
                                                 <div class="product-content">
-                                                    <h4>Modern Light</h4>
+                                                    <h4>{{$item_product->nama_product}}</h4>
                                                     <div class="product-price">
-                                                        <span>$ 124</span>
+                                                        <span>{{"Rp " . number_format(intval($item_product->harga),2,',','.')}}</span>
                                                     </div>
                                                 </div>
                                                 <div class="product-action-wrap">
                                                     <div class="product-action-cart">
-                                                        <a class="btn" href=""><img src="{{ url('aset/shopee.png') }}"
+                                                        <a class="btn" href="{{$item_product->shope_link}}" target="_blank"><img src="{{ url('aset/shopee.png') }}"
                                                                 alt=""></a>
                                                         <button class="btn" data-toggle="modal"
-                                                            data-target="#exampleModal"><i
+                                                            data-target="#product-{{$item_product->id}}"><i
                                                                 class="icon-zoom"></i></button>
-                                                        <a class="btn" href=""><img src="{{ url('aset/toped.png') }}"
+                                                        <a class="btn" href="{{$item_product->toped_link}}" target="_blank"><img src="{{ url('aset/toped.png') }}"
                                                                 alt=""></a>
                                                     </div>
                                                 </div>
@@ -89,30 +89,29 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <div class="product-list-img">
-                                                <a href="" data-toggle="modal" data-target="#exampleModal">
-                                                    <img src="{{ asset('front') }}/assets/images/product/product-138.jpg"
+                                                <a href="" data-toggle="modal" data-target="#product-{{$item_product->id}}">
+                                                    <img src="{{ asset('uploads/'. $item_product->gambar) }}"
                                                         alt="">
                                                 </a>
                                                 <div class="shop-list-quickview">
-                                                    <button data-toggle="modal" data-target="#exampleModal"><i
+                                                    <button data-toggle="modal" data-target="#product-{{$item_product->id}}"><i
                                                             class="icon-zoom"></i></button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
                                             <div class="shop-list-content ml-20">
-                                                <h3><a href="#">Product Title Here</a></h3>
+                                                <h3><a href="#">{{$item_product->nama_product}}</a></h3>
                                                 <div class="pro-list-price">
-                                                    <span>$50.00</span>
+                                                    <span>{{"Rp " . number_format(intval($item_product->harga),2,',','.')}}</span>
                                                 </div>
-                                                <p>Composition: 50% cotton,45% polyester, 5% polyamide. Filling: 100%
-                                                    polyester. Hood fur: 64% acrylic,23% modacrylic,13% polyester</p>
+                                                <p>{{$item_product->text}}</p>
                                                 <div class="product-list-action">
-                                                    <a class="btn" href=""><img src="{{ url('aset/shopee.png') }}"
+                                                    <a class="btn" href="{{$item_product->shope_link}}" target="_blank"><img src="{{ url('aset/shopee.png') }}"
                                                             alt=""></a>
-                                                    <button class="btn" data-toggle="modal" data-target="#exampleModal"><i
+                                                    <button class="btn" data-toggle="modal" data-target="#product-{{$item_product->id}}"><i
                                                             class="icon-zoom"></i></button>
-                                                    <a class="btn" href=""><img src="{{ url('aset/toped.png') }}"
+                                                    <a class="btn" href="{{$item_product->toped_link}}" target="_blank"><img src="{{ url('aset/toped.png') }}"
                                                             alt=""></a>
                                                 </div>
                                             </div>
@@ -123,13 +122,13 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div class="pro-pagination-style text-center mt-50">
+                        {{-- <div class="pro-pagination-style text-center mt-50">
                             <ul>
                                 <li><a class="active" href="#">1</a></li>
                                 <li><a href="#">2</a></li>
                                 <li><a href="#"><i class="icofont-long-arrow-right"></i></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                     @php $i++ @endphp
                     @endforeach
