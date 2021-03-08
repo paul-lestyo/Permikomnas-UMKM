@@ -1,4 +1,4 @@
-<footer class="footer-area bg-gray-9 pt-115">
+<footer class="footer-area bg-gray-9 pt-115" id="about">
     <div class="container">
         <div class="footer-top-style-3 pb-75">
             <div class="logo text-center">

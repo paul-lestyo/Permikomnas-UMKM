@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="logo text-center">
                         <a href="index.html">
-                            <img src="{{ asset('front') }}/assets/images/logo/logo.png" alt="logo">
+                            <img src="{{ asset('front') }}/assets/images/logo/logo.png" alt="logo" id="home">
                         </a>
                     </div>
                 </div>
@@ -14,12 +14,10 @@
                         <div class="main-menu menu-lh-2 main-menu-padding-1 menu-mrg-3">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="#">Pages</a></li>
-                                    <li><a href="shop.html">Collections</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact-us.html">Contact</a></li>
+                                    <li><a class="smooth" href="/#home">Home</a></li>
+                                    <li><a class="smooth" href="/#katalog">Katalog Produk</a></li>
+                                    <li><a class="smooth" href="/#toko">Toko</a></li>
+                                    <li><a class="smooth" href="/#about">About Us</a></li>
                                 </ul>
                             </nav>
                         </div>

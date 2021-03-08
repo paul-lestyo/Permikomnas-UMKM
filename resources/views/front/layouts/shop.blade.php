@@ -1,8 +1,9 @@
-<div class="breadcrumb-area breadcrumb-mt bg-gray breadcrumb-ptb-1">
+<div class="breadcrumb-area breadcrumb-mt bg-gray breadcrumb-ptb-1" id="katalog">
     <div class="container">
         <div class="breadcrumb-content text-center">
             <h2>Produk Lokal</h2>
-            <p>Berikut produk berupa makanan, minuman, tanaman atau kerajinan yang dihasilkan oleh UMKM di desa kami </p>
+            <p>Berikut produk berupa makanan, minuman, tanaman atau kerajinan yang dihasilkan oleh UMKM di desa kami
+            </p>
         </div>
     </div>
     <div class="breadcrumb-img-1">
@@ -656,7 +657,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
