@@ -17,9 +17,19 @@ class SliderSeeder extends Seeder
 
         DB::table('slider')->delete();
         $slider = [
-            ['id' => 1, 'judul' => 'a', 'text' => 'a', 'gambar' => 'slider/a.jpg', 'urutan' => 1],
-            ['id' => 2, 'judul' => 'b', 'text' => 'b', 'gambar' => 'slider/b.jpg', 'urutan' => 2],
-            ['id' => 3, 'judul' => 'b', 'text' => 'jadb', 'gambar' => 'slider/c.jpg', 'urutan' => 3]
+            // Slider 1
+            ['id' => 1, 
+            'judul' => 'Anthurium Corong', 
+            'text' => 'Tanaman anthurium corong berasal dari spesies Araceace yang bentuknya menyerupai corong. Bentuk corong pada daunnya membuat tanaman yang satu ini mudah dikenali oleh banyak orang. Selain itu, bentuk daunnya yang khas membuat tanaman ini terlihat cantik menghiasi rumah.', 
+            'gambar' => 'slider/566VhHcoTg0428LgrdQcEYUd638rTDbPOPz1nDgs.jpg', 'urutan' => 1],
+            //Slider 2
+            ['id' => 2, 'judul' => 'Tahu Kupat', 
+            'text' => 'makanan tradisional Indonesia yang berbahan dasar ketupat, tahu yang telah digoreng, dan juga bumbu kacang. ', 
+            'gambar' => 'slider/aE1WqyeYbfQHXkVjGRGP3IcaQvGlnXCmYz2FzQzf.jpg', 'urutan' => 2],
+            //Slider 3
+            ['id' => 3, 'judul' => 'Teh Gambyong', 
+            'text' => 'Berbeda dengan teh biasanya, teh Hitam Gambyong asal Dusun Mbadan RT 04/07, Kemuning, Ngargoyoso, Karanganyar, Jawa Tengah ini memiliki cita rasa yang khas. Dimana rasa teh yang setelah diseduh memiliki rasa kopi baik dari aroma hingga rasanya.', 
+            'gambar' => 'slider/UuY4nroIgyYuZA2snZbLgtOthOBiKB1qX7OMU18E.jpg', 'urutan' => 3]
         ];
         DB::table('slider')->insert($slider);
     }
