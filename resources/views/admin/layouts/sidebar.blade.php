@@ -5,17 +5,17 @@
 
       Tip 2: you can also add an image using data-image tag
   -->
-    <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-mini">
-            UM
+    <div class="logo"><a href="#" class="simple-text logo-mini">
+            <img src="{{ asset('front') }}/assets/images/logo/logokotak.png" style="width: 100%; height: 100%">
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal" style="font-size: 16px">
+        <a href="#" class="simple-text logo-normal" style="font-size: 16px">
             UMKM Desa Kemuning
         </a>
     </div>
     <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <img src="{{ asset('admin') }}/assets/img/faces/avatar.jpg" />
+                <img src="{{ asset('admin') }}/assets/img/faces/gambar_admin.jpg" />
             </div>
             <div class="user-info">
                 <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -28,7 +28,7 @@
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('logout')}}">
-                                <span class="sidebar-mini"> -> </span>
+                                <span class="sidebar-mini"> <img src="{{ asset('admin') }}/assets/img/logout_btn.png" style="width: 60%; height: 60%"> </span>
                                 <span class="sidebar-normal"> Logout </span>
                             </a>
                         </li>
