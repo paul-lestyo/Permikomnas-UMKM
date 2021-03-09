@@ -19,8 +19,8 @@ class CreateProductTable extends Migration
             $table->text('text')->nullable();
             $table->string('gambar', 255)->nullable();
             $table->string('harga', 50)->nullable();
-            $table->string('shope_link', 50)->nullable();
-            $table->string('toped_link', 50)->nullable();
+            $table->text('shope_link')->nullable();
+            $table->text('toped_link')->nullable();
             $table->foreignId('category_id')->nullable()->index();
             $table->foreignId('toko_id')->nullable()->index();
             $table->timestamps();
