@@ -97,7 +97,7 @@
                                     <div class="col-sm-10">
                                         <div class="form-group">
                                             <textarea class="form-control {{ $errors->has('text') ? 'is-invalid' : '' }}"
-                                                rows="5" name="text">{{ old('shope_link') ? old(shope_link) : $product->shope_link }}
+                                                rows="5" name="text">{{ old('text') ? old(text) : $product->text }}
                                             </textarea>
                                             <div class="invalid-feedback">
                                                 {{ $errors->first('text') }}
@@ -118,7 +118,7 @@
                                                 <span class="btn btn-rose btn-round btn-file">
                                                     <span class="fileinput-new">Select image</span>
                                                     <span class="fileinput-exists">Change</span>
-                                                    <input type="file" name="gambar" required>
+                                                    <input type="file" name="gambar">
                                                 </span>
                                                 <a href="#pablo" class="btn btn-danger btn-round fileinput-exists"
                                                     data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
