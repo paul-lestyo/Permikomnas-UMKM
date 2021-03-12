@@ -31,7 +31,24 @@
     <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/vendor.min.css">
     <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/plugins.min.css">
     <link rel="stylesheet" href="{{ asset('front') }}/assets/css/style.min.css"> -->
+    <style>
+        .slider-mt-7, .breadcrumb-mt {
+            margin-top: 0; !important
+        }
 
+        .slick-list {
+            padding-top: 40px;
+        }
+
+        @media only screen and (max-width: 767px){
+            .breadcrumb-ptb-1 {
+                padding: 0;
+            }
+            .slider-mt-7, .breadcrumb-mt {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
