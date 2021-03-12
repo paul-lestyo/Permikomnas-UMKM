@@ -12,7 +12,7 @@
                         @foreach ($toko as $item)
                             <div class="col-lg-2 col-md-3 col-6 col-sm-4">
                                 <div class="single-brand-logo-3 mb-30">
-                                    <img src="{{ url('uploads/' . $item->logo) }}" alt="{{ $item->nama_toko }}"
+                                    <img src="{{ url('uploads/' . $item->logo) }}" alt="{{ $item->nama_toko }}" title="{{ $item->nama_toko }}"
                                         width="100" height="100">
                                 </div>
                             </div>
