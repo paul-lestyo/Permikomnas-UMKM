@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 col-sm-6">
                                 <div class="slider-single-img slider-sin-img-mrg2 slider-animated-1">
-                                    <img class="animated" src="{{ url('uploads/' . $item->gambar) }}" alt="">
+                                    <img class="animated" src="{{ url('uploads/' . $item->gambar) }}" alt="" style="width: 750px; height: 750px">
                                 </div>
                             </div>
                         </div>
