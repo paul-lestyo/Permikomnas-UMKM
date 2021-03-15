@@ -1,4 +1,4 @@
-<div class="slider-area slider-fashion-4-plr slider-mt-5 pb-100">
+<div class="slider-area slider-fashion-4-plr slider-mt-5">
     <div class="container-fluid">
         <div class="slider-active-1 nav-style-1 dot-style-1">
 
@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 col-sm-6">
                                 <div class="slider-single-img slider-sin-img-mrg2 slider-animated-1">
-                                    <img class="animated" src="{{ url('uploads/' . $item->gambar) }}" alt="" style="width: 750px; max-height: 750px;min-height: 300px;">
+                                    <img class="animated" src="{{ url('uploads/' . $item->gambar) }}" alt="" style="width: 750px; height: 400px; object-fit: cover; object-position: center;">
                                 </div>
                             </div>
                         </div>
