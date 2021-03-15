@@ -13,7 +13,7 @@
         <img src="{{ asset('front') }}/assets/images/about/breadcrumb-2.png" alt="">
     </div>
 </div>
-<div class="shop-area pt-160 pb-160">
+<div class="shop-area pt-50 pb-125">
     <div class="container">
         <div class="shop-categorie-tab mb-20 nav">
             @php $i = 1 @endphp

@@ -117,7 +117,7 @@
                                                     data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                                                 <br>
                                                 <span style="color:rgba(65, 65, 65, 0.989) ">Pastikan Anda Mengupload Gambar
-                                                    BerFormat jpeg,jpg,png <br> dan tidak lebih dari 500kb</span>
+                                                    Berformat jpeg,jpg,png <br> dan tidak lebih dari 500kb</span>
                                             </div>
                                         </div>
                                     </div>

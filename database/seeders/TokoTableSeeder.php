@@ -40,6 +40,27 @@ class TokoTableSeeder extends Seeder
                 'contact' => NULL,
                 'logo' => 'toko/wvgrG58SE9KL6l49HZsOIfC7S6oHGwfTsNzyjOXs.jpg',
             ),
+            3 => 
+            array (
+                'id' => 4,
+                'nama_toko' => 'Jamu dan Wedang Jawa',
+                'contact' => NULL,
+                'logo' => 'toko/H3vfIgo1BbREBgYr4sxYNIyPxT0ZCQwVxkSazafj.png',
+            ),
+            4 => 
+            array (
+                'id' => 5,
+                'nama_toko' => 'Alz Kemuning',
+                'contact' => NULL,
+                'logo' => 'toko/tmH6ArTXJJfRMbcscbe7P3pryWvfaKhgvv7tHSzW.jpg',
+            ),
+            5 => 
+            array (
+                'id' => 6,
+                'nama_toko' => 'Tanaman Pak Dwi Laksono',
+                'contact' => NULL,
+                'logo' => 'toko/HWlkCvH3yGLmi08qLBMVqfnW6zGh6roUJstjeTJ0.jpg',
+            ),
         ));
         
         
