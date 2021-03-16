@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/plugins.min.css">
     <link rel="stylesheet" href="{{ asset('front') }}/assets/css/style.min.css"> -->
     <style>
+        .tab-content>.active {
+            animation: fadeIn 2s;
+        }
         .slider-mt-7, .breadcrumb-mt {
             margin-top: 0; !important
         }
