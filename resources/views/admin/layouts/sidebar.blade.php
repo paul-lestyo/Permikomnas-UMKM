@@ -1,12 +1,12 @@
 <div class="sidebar" data-color="rose" data-background-color="black"
-    data-image="{{ asset('admin') }}/assets/img/sidebar-1.jpg">
+    data-image="{{ secure_asset('admin') }}/assets/img/sidebar-1.jpg">
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
       Tip 2: you can also add an image using data-image tag
   -->
     <div class="logo"><a href="#" class="simple-text logo-mini">
-            <img src="{{ asset('front') }}/assets/images/logo/logokotak.png" style="width: 100%; height: 100%">
+            <img src="{{ secure_asset('front') }}/assets/images/logo/logokotak.png" style="width: 100%; height: 100%">
         </a>
         <a href="#" class="simple-text logo-normal" style="font-size: 16px">
             UMKM Desa Kemuning
@@ -15,7 +15,7 @@
     <div class="sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <img src="{{ asset('admin') }}/assets/img/faces/gambar_admin.jpg" />
+                <img src="{{ secure_asset('admin') }}/assets/img/faces/gambar_admin.jpg" />
             </div>
             <div class="user-info">
                 <a data-toggle="collapse" href="#collapseExample" class="username">
@@ -28,7 +28,7 @@
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('logout')}}">
-                                <span class="sidebar-mini"> <img src="{{ asset('admin') }}/assets/img/logout_btn.png" style="width: 60%; height: 60%"> </span>
+                                <span class="sidebar-mini"> <img src="{{ secure_asset('admin') }}/assets/img/logout_btn.png" style="width: 60%; height: 60%"> </span>
                                 <span class="sidebar-normal"> Logout </span>
                             </a>
                         </li>
