@@ -3,7 +3,7 @@
         <div class="footer-top-style-3 pb-50">
             <div class="logo text-center">
                 <a href="index.html">
-                    <img src="{{ asset('front') }}/assets/images/logo/logo.png" alt="logo">
+                    <img src="{{ secure_asset('front') }}/assets/images/logo/logo.png" alt="logo">
                 </a>
             </div>
             <p>Ini Merupakan Web Katalog dari UMKM di Desa Kemuning</p>

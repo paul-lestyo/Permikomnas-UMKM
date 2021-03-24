@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-12 col-sm-6">
                                 <div class="quickview-img">
-                                    <img src="{{ asset('uploads/'. $item->gambar) }}" alt="">
+                                    <img src="{{ secure_asset('uploads/'. $item->gambar) }}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-7 col-12 col-sm-6">

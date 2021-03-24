@@ -7,10 +7,10 @@
         </div>
     </div>
     <div class="breadcrumb-img-1">
-        <img src="{{ asset('front') }}/assets/images/about/breadcrumb-1.png" alt="">
+        <img src="{{ secure_asset('front') }}/assets/images/about/breadcrumb-1.png" alt="">
     </div>
     <div class="breadcrumb-img-2">
-        <img src="{{ asset('front') }}/assets/images/about/breadcrumb-2.png" alt="">
+        <img src="{{ secure_asset('front') }}/assets/images/about/breadcrumb-2.png" alt="">
     </div>
 </div>
 <div class="shop-area pt-50 pb-125">
@@ -32,9 +32,9 @@
                             <div class="shop-top-bar-left">
                                 <div class="shop-tab nav">
                                     <a href="#shop-{{$item_category->id}}-1" class="active" data-toggle="tab"><img
-                                            class="inject-me" src="{{ asset('front') }}/assets/images/icon/shop-grid.svg" alt=""></a>
+                                            class="inject-me" src="{{ secure_asset('front') }}/assets/images/icon/shop-grid.svg" alt=""></a>
                                     <a href="#shop-{{$item_category->id}}-2" data-toggle="tab"><img
-                                            class="inject-me" src="{{ asset('front') }}/assets/images/icon/shop-list.svg" alt=""></a>
+                                            class="inject-me" src="{{ secure_asset('front') }}/assets/images/icon/shop-list.svg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                         <div class="product-wrap mb-50">
                                             <div class="product-img product-img-zoom mb-25">
                                                 <a href="" data-toggle="modal" data-target="#product-{{$item_product->id}}">
-                                                    <img src="{{ asset('uploads/'. $item_product->gambar) }}"
+                                                    <img src="{{ secure_asset('uploads/'. $item_product->gambar) }}"
                                                         alt="">
                                                 </a>
                                             </div>
@@ -90,7 +90,7 @@
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <div class="product-list-img">
                                                 <a href="" data-toggle="modal" data-target="#product-{{$item_product->id}}">
-                                                    <img src="{{ asset('uploads/'. $item_product->gambar) }}"
+                                                    <img src="{{ secure_asset('uploads/'. $item_product->gambar) }}"
                                                         alt="">
                                                 </a>
                                                 <div class="shop-list-quickview">
