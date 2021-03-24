@@ -38,9 +38,6 @@
                 </div>
                 <div class="col-6">
                     <div class="header-action-wrap header-action-flex header-action-mrg-1">
-                        <div class="same-style header-cart">
-                            <a class="cart-active" href="#"><i class="icofont-shopping-cart"></i></a>
-                        </div>
                         <div class="same-style header-info">
                             <button class="mobile-menu-button-active">
                                 <span class="info-width-1"></span>
@@ -59,32 +56,18 @@
     <div class="clickalbe-sidebar-wrap">
         <a class="sidebar-close"><i class="icofont-close-line"></i></a>
         <div class="mobile-menu-content-area sidebar-content-100-percent">
-            <div class="mobile-search">
-                <form class="search-form" action="#">
-                    <input type="text" placeholder="Search here…">
-                    <button class="button-search"><i class="icofont-search-1"></i></button>
-                </form>
-            </div>
+
             <div class="clickable-mainmenu-wrap clickable-mainmenu-style1">
                 <nav>
                     <ul>
-                        <li class="has-sub-menu"><a href="#">Home</a></li>
-                        <li class="has-sub-menu"><a href="#">shop</a></li>
-                        <li class="has-sub-menu"><a href="#">Pages</a></li>
-                        <li><a href="shop.html">Collections</a></li>
-                        <li class="has-sub-menu"><a href="#">Blog</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a class="smooth" href="/#home">Home</a></li>
+                        <li><a class="smooth" href="/#katalog">Katalog Produk</a></li>
+                        <li><a class="smooth" href="/#toko">Toko</a></li>
+                        <li><a class="smooth" href="/#about">About Us</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="aside-contact-info">
-                <ul>
-                    <li><i class="icofont-clock-time"></i>Monday - Friday: 9:00 - 19:00</li>
-                    <li><i class="icofont-envelope"></i>Info@example.com</li>
-                    <li><i class="icofont-stock-mobile"></i>(+55) 254. 254. 254</li>
-                    <li><i class="icofont-home"></i>Helios Tower 75 Tam Trinh Hoang - Ha Noi - Viet Nam</li>
-                </ul>
-            </div>
+
         </div>
     </div>
 </div>

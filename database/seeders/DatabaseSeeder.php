@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ProductTableSeeder::class,
             TokoTableSeeder::class,
-            CategoryTableSeeder::class
+            CategoryTableSeeder::class,
+            PengunjungSeeder::class,
         ]);
     }
 }
