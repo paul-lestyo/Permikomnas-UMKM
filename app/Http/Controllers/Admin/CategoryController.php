@@ -23,7 +23,7 @@ class CategoryController extends Controller
     public function add(request $request)
     {
        $data = new Category;
-       $data->nama_category = \DB::table('category')->max('id') + 1;
+       $data->id = \DB::table('category')->max('id') + 1;
        $data->nama_category = $request->nama;
        $data->save();
         return redirect()->route('admin.category.index')
