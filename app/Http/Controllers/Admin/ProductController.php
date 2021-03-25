@@ -42,6 +42,7 @@ class ProductController extends Controller
         $filename = Storage::disk('public')->putFile('product', $request->file('gambar'));
         
         Product::create([
+            'id' => \DB::table('product')->max('id') + 1,
             'nama_product' => $request->nama_product,
             'text' => $request->text,
             'gambar' => $filename,

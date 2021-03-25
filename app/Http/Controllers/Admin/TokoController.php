@@ -26,6 +26,7 @@ class TokoController extends Controller
         $filename = Storage::disk('public')->putFile('toko', $request->file('logo'));
         
         Toko::create([
+            'id' => \DB::table('toko')->max('id') + 1,
             'nama_toko' => $request->nama_toko,
             'logo' => $filename
         ]);
