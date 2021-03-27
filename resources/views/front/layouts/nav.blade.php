@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="logo text-center">
                         <a href="index.html">
-                            <img src="{{ secure_asset('front') }}/assets/images/logo/logo.png" alt="logo" id="home">
+                            <img src="{{ asset('front') }}/assets/images/logo/logo.png" alt="logo" id="home">
                         </a>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="col-6">
                     <div class="mobile-logo mobile-logo-width">
                         <a href="index.html">
-                            <img alt="" src="{{ secure_asset('front') }}/assets/images/logo/logo.png">
+                            <img alt="" src="{{ asset('front') }}/assets/images/logo/logo.png">
                         </a>
                     </div>
                 </div>

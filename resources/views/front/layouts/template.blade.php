@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ secure_asset('front') }}/assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front') }}/assets/images/favicon.png">
 
     <!-- All CSS is here
  ============================================ -->
@@ -28,9 +28,9 @@
     <link rel="stylesheet" href="{{ asset('front') }}/assets/css/style.css">
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/vendor.min.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/plugins.min.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/style.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/vendor.min.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/plugins.min.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/style.min.css"> -->
     <style>
         .tab-content>.active {
             animation: fadeIn 2s;
@@ -94,10 +94,10 @@
     <script src="{{ asset('front') }}/assets/js/plugins/ajax-mail.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
-<script src="{{ secure_asset('front') }}/assets/js/vendor/vendor.min.js"></script>
-<script src="{{ secure_asset('front') }}/assets/js/plugins/plugins.min.js"></script> -->
+<script src="{{ asset('front') }}/assets/js/vendor/vendor.min.js"></script>
+<script src="{{ asset('front') }}/assets/js/plugins/plugins.min.js"></script> -->
     <!-- Main JS -->
-    <script src="{{ secure_asset('front') }}/assets/js/main.js"></script>
+    <script src="{{ asset('front') }}/assets/js/main.js"></script>
 
 </body>
 
