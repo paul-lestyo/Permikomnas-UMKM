@@ -14,18 +14,18 @@
     <!-- All CSS is here
  ============================================ -->
 
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/vandella.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/jellybelly.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/icofont.min.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/fontello.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/easyzoom.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/slick.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/animate.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/magnific-popup.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/plugins/jquery-ui.css">
-    <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/vandella.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/jellybelly.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/icofont.min.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/vendor/fontello.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/easyzoom.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="{{ asset('front') }}/assets/css/style.css">
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
     <link rel="stylesheet" href="{{ secure_asset('front') }}/assets/css/vendor/vendor.min.css">
@@ -35,19 +35,24 @@
         .tab-content>.active {
             animation: fadeIn 2s;
         }
-        .slider-mt-7, .breadcrumb-mt {
-            margin-top: 0; !important
+
+        .slider-mt-7,
+        .breadcrumb-mt {
+            margin-top: 0;
+             !important
         }
 
         .slick-list {
             padding-top: 40px;
         }
 
-        @media only screen and (max-width: 767px){
+        @media only screen and (max-width: 767px) {
             .breadcrumb-ptb-1 {
                 padding: 0;
             }
-            .slider-mt-7, .breadcrumb-mt {
+
+            .slider-mt-7,
+            .breadcrumb-mt {
                 margin-top: 10px;
             }
         }
@@ -68,25 +73,25 @@
     </div>
     <!-- All JS is here
 ============================================ -->
-    <script src="{{ secure_asset('front') }}/assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/vendor/jquery-3.5.1.min.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/slick.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/countdown.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/wow.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/instafeed.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/svg-injector.min.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/jquery.nice-select.min.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/mouse-parallax.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/images-loaded.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/isotope.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/jquery-ui-touch-punch.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/jquery-ui.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/magnific-popup.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/easyzoom.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/scrollup.js"></script>
-    <script src="{{ secure_asset('front') }}/assets/js/plugins/ajax-mail.js"></script>
+    <script src="{{ asset('front') }}/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="{{ asset('front') }}/assets/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="{{ asset('front') }}/assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+    <script src="{{ asset('front') }}/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/slick.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/countdown.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/wow.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/instafeed.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/svg-injector.min.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/mouse-parallax.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/images-loaded.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/isotope.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/jquery-ui.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/magnific-popup.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/easyzoom.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/scrollup.js"></script>
+    <script src="{{ asset('front') }}/assets/js/plugins/ajax-mail.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
 <script src="{{ secure_asset('front') }}/assets/js/vendor/vendor.min.js"></script>
@@ -145,5 +150,4 @@
         });
 
     });
-
 </script>
